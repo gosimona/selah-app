@@ -330,7 +330,7 @@ function Intro({onStart}) {
           <span style={{color:G.terra,fontStyle:"italic"}}>hoy.</span>
         </h1>
         <p style={{color:G.textMuted,fontSize:14,lineHeight:1.6}}>
-          3 minutos · 12 preguntas
+          5 minutos · 20 preguntas
         </p>
       </div>
 
