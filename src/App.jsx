@@ -25,216 +25,212 @@ const G = {
 
 const QUESTIONS = [
 
-  // ── ETAPA 1: SEGMENTACIÓN Y ACTIVACIÓN (1-4) ─────────────────
-  // Función: declarar identidad, primer micro-compromiso
+  // ── ETAPA 1: TU MOMENTO ESPIRITUAL (1-4) ─────────────────────
 
   {id:1, category:"Tu momento espiritual",
-   pregunta:"Antes de empezar —\n¿cómo describirías tu fe hoy?",
-   subtexto:"No hay respuesta correcta. Solo la tuya.",
+   pregunta:"¿Cómo está tu fe hoy?",
+   subtexto:"Sin filtros. Solo la verdad.",
    opciones:[
-    {texto:"Activa pero agotada — creo, pero estoy cansada de pelear sola",valor:"guerrera",emoji:"⚔️"},
-    {texto:"Dormida — siento que Dios está lejos y no sé cómo acercarlo",valor:"buscadora",emoji:"🌫️"},
-    {texto:"Herida — hay algo entre Él y yo que todavía no he podido soltar",valor:"sanadora",emoji:"💔"},
-    {texto:"Hambrienta — tengo fe pero sé que hay mucho más para mí",valor:"visionaria",emoji:"✨"},
+    {texto:"Activa pero agotada",valor:"guerrera",emoji:"⚔️"},
+    {texto:"Dormida — Dios se siente lejos",valor:"buscadora",emoji:"🌫️"},
+    {texto:"Herida — hay algo que no he soltado",valor:"sanadora",emoji:"💔"},
+    {texto:"Hambrienta — quiero más",valor:"visionaria",emoji:"✨"},
   ]},
 
   {id:2, category:"Tu momento espiritual",
-   pregunta:"¿Cuándo fue la última vez que sentiste\nque Dios te hablaba directamente a ti?",
-   subtexto:"No a través de un sermón. A ti. A tu historia.",
+   pregunta:"¿Cuándo fue la última vez que sentiste que Dios te hablaba a ti?",
+   subtexto:"No a través de un sermón. A ti. Directo.",
    opciones:[
-    {texto:"Esta semana — tengo momentos pero son escasos",valor:"guerrera",emoji:"🌤️"},
-    {texto:"Hace meses — ha sido un tiempo de silencio",valor:"buscadora",emoji:"🌑"},
-    {texto:"En un momento de quiebre — cuando más lo necesitaba",valor:"sanadora",emoji:"🌊"},
-    {texto:"Lo siento seguido pero quiero ir más profundo",valor:"visionaria",emoji:"🔍"},
+    {texto:"Esta semana",valor:"guerrera",emoji:"🌤️"},
+    {texto:"Hace meses",valor:"buscadora",emoji:"🌑"},
+    {texto:"En mi peor momento",valor:"sanadora",emoji:"🌊"},
+    {texto:"Lo siento — quiero más profundidad",valor:"visionaria",emoji:"🔍"},
   ]},
 
   {id:3, category:"Tu momento espiritual",
-   pregunta:"¿Has intentado crear una rutina espiritual\ny la has abandonado?",
-   subtexto:"Sé honesta. Esto no te define — nos ayuda a entenderte.",
+   pregunta:"Has intentado una rutina espiritual y la abandonaste.",
+   subtexto:"¿Qué pasó?",
    opciones:[
-    {texto:"Varias veces — empiezo bien y a los días desaparece",valor:"buscadora",emoji:"📅"},
-    {texto:"Sí, una vez — y me quedé con culpa",valor:"sanadora",emoji:"😔"},
-    {texto:"Lo intento pero la vida siempre gana",valor:"guerrera",emoji:"⏳"},
-    {texto:"Tengo rutina pero quiero que sea más significativa",valor:"visionaria",emoji:"🌱"},
+    {texto:"Empiezo bien y desaparece sola",valor:"buscadora",emoji:"📅"},
+    {texto:"Me quedé con culpa",valor:"sanadora",emoji:"😔"},
+    {texto:"La vida siempre gana",valor:"guerrera",emoji:"⏳"},
+    {texto:"Tengo rutina — quiero que sea más real",valor:"visionaria",emoji:"🌱"},
   ]},
 
   {id:4, category:"Tu momento espiritual",
-   pregunta:"¿Sabías que las mujeres con un momento espiritual diario reportan 47% menos ansiedad crónica que las que no lo tienen?",
-   subtexto:"Investigación de la Universidad de Harvard, 2023.",
+   pregunta:"Las mujeres con 5 minutos espirituales al día tienen 47% menos ansiedad.",
+   subtexto:"¿Qué sientes al leer eso?",
    opciones:[
-    {texto:"No lo sabía — y me hace querer empezar hoy",valor:"buscadora",emoji:"💡"},
+    {texto:"Quiero empezar hoy",valor:"buscadora",emoji:"💡"},
     {texto:"Lo intuía — por eso estoy aquí",valor:"guerrera",emoji:"🙏"},
-    {texto:"Lo sé pero no he podido mantenerlo",valor:"sanadora",emoji:"💭"},
-    {texto:"Ya lo practico — quiero profundizar más",valor:"visionaria",emoji:"📖"},
+    {texto:"Lo sé — no he podido mantenerlo",valor:"sanadora",emoji:"💭"},
+    {texto:"Ya lo hago — quiero más",valor:"visionaria",emoji:"📖"},
   ]},
 
-  // ── ETAPA 2: DIAGNÓSTICO DEL DOLOR (5-9) ─────────────────────
-  // Función: activar la herida central, crear urgencia emocional
+  // ── ETAPA 2: LO QUE CARGAS (5-9) ─────────────────────────────
 
   {id:5, category:"Lo que cargas",
-   pregunta:"¿Con qué frecuencia sientes que tu fe\ndepende de cómo te sientes ese día?",
+   pregunta:"¿Tu fe depende de cómo te sientes ese día?",
    subtexto:"Si el ánimo está bien, oras. Si no, desapareces.",
    opciones:[
-    {texto:"Siempre — mi fe es muy inconsistente",valor:"buscadora",emoji:"🎭"},
-    {texto:"Seguido — los días difíciles me alejan de Dios",valor:"sanadora",emoji:"🌧️"},
-    {texto:"A veces — pero me pesa cuando pasa",valor:"guerrera",emoji:"😮‍💨"},
-    {texto:"Casi nunca — mi fe es mi ancla aunque no me sienta bien",valor:"visionaria",emoji:"⚓"},
+    {texto:"Siempre — soy muy inconsistente",valor:"buscadora",emoji:"🎭"},
+    {texto:"Seguido — los días difíciles me alejan",valor:"sanadora",emoji:"🌧️"},
+    {texto:"A veces — y me pesa",valor:"guerrera",emoji:"😮‍💨"},
+    {texto:"Casi nunca — es mi ancla",valor:"visionaria",emoji:"⚓"},
   ]},
 
   {id:6, category:"Lo que cargas",
-   pregunta:"¿Cargas algo que no le has contado\na nadie?",
-   subtexto:"Ni a tu familia. Ni a tu mejor amiga. Ni a tu pastor.\nSolo tú lo sabes.",
+   pregunta:"¿Hay algo que no le has contado a nadie?",
+   subtexto:"Ni a tu familia. Ni a tu mejor amiga. Ni a tu pastor.",
    opciones:[
-    {texto:"Sí — hay algo que llevo sola hace mucho tiempo",valor:"sanadora",emoji:"🤐"},
-    {texto:"Sí — y me pesa más de lo que muestro",valor:"guerrera",emoji:"🏋️"},
-    {texto:"Sí — y a veces siento que Dios tampoco lo entiende",valor:"buscadora",emoji:"❓"},
-    {texto:"Lo cargo pero lo estoy aprendiendo a soltar",valor:"visionaria",emoji:"🕊️"},
+    {texto:"Sí — lo llevo sola hace mucho",valor:"sanadora",emoji:"🤐"},
+    {texto:"Sí — y pesa más de lo que muestro",valor:"guerrera",emoji:"🏋️"},
+    {texto:"Sí — a veces siento que Dios tampoco entiende",valor:"buscadora",emoji:"❓"},
+    {texto:"Lo cargo — pero lo estoy soltando",valor:"visionaria",emoji:"🕊️"},
   ]},
 
   {id:7, category:"Lo que cargas",
-   pregunta:"Cuando oras, ¿cómo te sientes\nla mayoría de las veces?",
-   subtexto:"Honestidad total aquí.",
+   pregunta:"Cuando oras, ¿qué sientes?",
+   subtexto:"La respuesta honesta. No la correcta.",
    opciones:[
-    {texto:"Como si las palabras llegaran al techo y volvieran",valor:"buscadora",emoji:"🌫️"},
-    {texto:"Con alivio — pero la carga vuelve al rato",valor:"sanadora",emoji:"🔄"},
-    {texto:"Con fuerza — pero necesito más consistencia",valor:"guerrera",emoji:"💪"},
-    {texto:"Con conexión — pero quiero conversaciones más profundas",valor:"visionaria",emoji:"🌊"},
+    {texto:"Que las palabras llegan al techo",valor:"buscadora",emoji:"🌫️"},
+    {texto:"Alivio — pero la carga vuelve",valor:"sanadora",emoji:"🔄"},
+    {texto:"Fuerza — pero me falta constancia",valor:"guerrera",emoji:"💪"},
+    {texto:"Conexión — quiero más profundidad",valor:"visionaria",emoji:"🌊"},
   ]},
 
   {id:8, category:"Lo que cargas",
-   pregunta:"¿Cuáles de estos describes como\ntus desafíos espirituales?",
-   subtexto:"Selecciona el que más te represente hoy.",
+   pregunta:"¿Cuál es tu mayor desafío espiritual hoy?",
+   subtexto:"El que más duele cuando lo nombras.",
    opciones:[
-    {texto:"La culpa — siento que no soy suficientemente buena cristiana",valor:"sanadora",emoji:"😞"},
-    {texto:"La distancia — Dios se siente lejano e inalcanzable",valor:"buscadora",emoji:"🏝️"},
+    {texto:"La culpa — nunca me siento suficiente",valor:"sanadora",emoji:"😞"},
+    {texto:"La distancia — Dios se siente inalcanzable",valor:"buscadora",emoji:"🏝️"},
     {texto:"El agotamiento — mi fe es real pero estoy cansada",valor:"guerrera",emoji:"😮‍💨"},
-    {texto:"La superficialidad — quiero más que solo rituales",valor:"visionaria",emoji:"🔮"},
+    {texto:"La superficialidad — quiero más que rituales",valor:"visionaria",emoji:"🔮"},
   ]},
 
   {id:9, category:"Lo que cargas",
-   pregunta:"¿Sabías que el perfil espiritual de una mujer cambia completamente cada 3 a 5 años según sus experiencias de vida — duelos, relaciones, logros y fe?",
-   subtexto:"Lo que funcionaba antes puede no funcionar hoy.",
+   pregunta:"Tu perfil espiritual cambia cada 3-5 años.",
+   subtexto:"Lo que te funcionaba antes puede no funcionar hoy.",
    opciones:[
-    {texto:"Esto explica por qué lo que antes me funcionaba ya no funciona",valor:"buscadora",emoji:"💡"},
-    {texto:"Lo intuía — siento que soy una persona diferente espiritualmente",valor:"sanadora",emoji:"🦋"},
-    {texto:"Sí — y quiero entender quién soy en este nuevo momento",valor:"guerrera",emoji:"🗺️"},
-    {texto:"Lo sé — por eso busco algo que crezca conmigo",valor:"visionaria",emoji:"🌳"},
+    {texto:"Eso explica por qué ya no funciona lo de antes",valor:"buscadora",emoji:"💡"},
+    {texto:"Sí — soy otra persona espiritualmente",valor:"sanadora",emoji:"🦋"},
+    {texto:"Quiero entender quién soy en este momento",valor:"guerrera",emoji:"🗺️"},
+    {texto:"Lo sé — busco algo que crezca conmigo",valor:"visionaria",emoji:"🌳"},
   ]},
 
-  // ── ETAPA 3: VISIÓN E IDENTIDAD (10-15) ──────────────────────
-  // Función: construir el sueño, instalar la identidad deseada
+  // ── ETAPA 3: LO QUE TU ALMA NECESITA (10-15) ─────────────────
 
   {id:10, category:"Lo que tu alma necesita",
-   pregunta:"Si tu relación con Dios fuera exactamente\ncomo la deseas —\n¿cómo te sentirías cada mañana?",
-   subtexto:"Cierra los ojos un segundo antes de responder.",
+   pregunta:"Si tu relación con Dios fuera como la deseas... ¿cómo amanecerías?",
+   subtexto:"Cierra los ojos un segundo.",
    opciones:[
-    {texto:"En paz — empezando el día desde la calma, no desde el caos",valor:"sanadora",emoji:"🌅"},
-    {texto:"Fuerte — sabiendo que no estoy sola en mis batallas",valor:"guerrera",emoji:"⚔️"},
-    {texto:"Conectada — sintiendo que Dios me conoce y me habla",valor:"buscadora",emoji:"🤍"},
-    {texto:"Clara — sabiendo hacia dónde voy y por qué",valor:"visionaria",emoji:"🎯"},
+    {texto:"En paz — sin caos desde el inicio",valor:"sanadora",emoji:"🌅"},
+    {texto:"Fuerte — sabiendo que no estoy sola",valor:"guerrera",emoji:"⚔️"},
+    {texto:"Conectada — sintiendo que Él me conoce",valor:"buscadora",emoji:"🤍"},
+    {texto:"Clara — sabiendo hacia dónde voy",valor:"visionaria",emoji:"🎯"},
   ]},
 
   {id:11, category:"Lo que tu alma necesita",
-   pregunta:"¿Qué tan acompañada te sientes\nen tu fe hoy?",
-   subtexto:"La fe fue diseñada para no caminarse sola.",
+   pregunta:"¿Qué tan sola te sientes en tu fe?",
+   subtexto:"La fe no fue diseñada para caminarse sola.",
    opciones:[
-    {texto:"Completamente sola — no tengo a nadie con quien hablar de esto",valor:"buscadora",emoji:"🏝️"},
-    {texto:"Tengo personas pero nadie que entienda lo que realmente cargo",valor:"sanadora",emoji:"🤐"},
-    {texto:"Tengo comunidad pero a veces siento que no encajo",valor:"guerrera",emoji:"🧩"},
-    {texto:"Busco conexiones más profundas — no conversaciones superficiales",valor:"visionaria",emoji:"🌐"},
+    {texto:"Completamente sola",valor:"buscadora",emoji:"🏝️"},
+    {texto:"Tengo personas — pero nadie entiende lo que cargo",valor:"sanadora",emoji:"🤐"},
+    {texto:"Tengo comunidad — pero no encajo",valor:"guerrera",emoji:"🧩"},
+    {texto:"Busco conexiones más profundas",valor:"visionaria",emoji:"🌐"},
   ]},
 
   {id:12, category:"Lo que tu alma necesita",
-   pregunta:"¿Qué es lo que más necesita\ntu alma en este momento?",
-   subtexto:"No lo que debería necesitar. Lo que realmente necesita.",
+   pregunta:"¿Qué necesita tu alma ahora mismo?",
+   subtexto:"No lo que debería. Lo que realmente necesita.",
    opciones:[
-    {texto:"Sanidad — soltar algo que cargo hace demasiado tiempo",valor:"sanadora",emoji:"🩹"},
-    {texto:"Reconexión — volver a sentir que Dios está presente en mi vida",valor:"buscadora",emoji:"🔌"},
-    {texto:"Fortaleza — sostenerme en la fe cuando todo se cae",valor:"guerrera",emoji:"🛡️"},
-    {texto:"Propósito — entender para qué estoy aquí y qué hacer con eso",valor:"visionaria",emoji:"🗺️"},
+    {texto:"Sanar algo que cargo hace mucho",valor:"sanadora",emoji:"🩹"},
+    {texto:"Volver a sentir que Dios está",valor:"buscadora",emoji:"🔌"},
+    {texto:"Sostenerme cuando todo se cae",valor:"guerrera",emoji:"🛡️"},
+    {texto:"Entender para qué estoy aquí",valor:"visionaria",emoji:"🗺️"},
   ]},
 
   {id:13, category:"Lo que tu alma necesita",
-   pregunta:"Cuando piensas en leer la Biblia,\n¿qué sientes honestamente?",
-   subtexto:'No hay respuesta correcta. Solo la tuya.',
+   pregunta:"Cuando piensas en abrir la Biblia, ¿qué sientes?",
+   subtexto:"Tu respuesta real. No la de buena cristiana.",
    opciones:[
-    {texto:"Que no sé por dónde empezar y me abruma",valor:"buscadora",emoji:"📖"},
-    {texto:"Que quiero hacerlo pero la vida siempre gana",valor:"guerrera",emoji:"⏳"},
-    {texto:"Que la leo pero no siento que me habla a mí específicamente",valor:"sanadora",emoji:"💬"},
-    {texto:"Que es mi pan diario pero quiero ir más profundo",valor:"visionaria",emoji:"🔍"},
+    {texto:"No sé por dónde empezar",valor:"buscadora",emoji:"📖"},
+    {texto:"Quiero — pero la vida siempre gana",valor:"guerrera",emoji:"⏳"},
+    {texto:"La leo — pero no me habla a mí",valor:"sanadora",emoji:"💬"},
+    {texto:"Es mi pan — quiero más profundidad",valor:"visionaria",emoji:"🔍"},
   ]},
 
   {id:14, category:"Lo que tu alma necesita",
-   pregunta:"¿Cómo te hablas a ti misma\ncuando nadie te escucha?",
-   subtexto:"La voz interior dice más sobre nosotras que cualquier otra cosa.",
+   pregunta:"¿Cómo te hablas cuando nadie te escucha?",
+   subtexto:"Esa voz lo dice todo.",
    opciones:[
-    {texto:"Con dureza — soy mi crítica más cruel",valor:"sanadora",emoji:"💔"},
-    {texto:"Con duda — ¿seré suficiente para esto?",valor:"buscadora",emoji:"❓"},
-    {texto:"Con presión — tienes que poder, no puedes flaquear",valor:"guerrera",emoji:"⚡"},
-    {texto:"Con expectativa — hay algo grande en mí que todavía no ha salido",valor:"visionaria",emoji:"🌟"},
+    {texto:"Con dureza — soy mi peor crítica",valor:"sanadora",emoji:"💔"},
+    {texto:"Con duda — ¿seré suficiente?",valor:"buscadora",emoji:"❓"},
+    {texto:"Con presión — no puedes flaquear",valor:"guerrera",emoji:"⚡"},
+    {texto:"Con expectativa — hay algo grande en mí",valor:"visionaria",emoji:"🌟"},
   ]},
 
   {id:15, category:"Lo que tu alma necesita",
-   pregunta:"¿Qué mujer quieres ser\ndentro de 21 días?",
-   subtexto:"Sé específica. Esto es para ti.",
+   pregunta:"¿Qué mujer quieres ser en 21 días?",
+   subtexto:"La que sabes que puedes ser.",
    opciones:[
-    {texto:"Una mujer en paz — que no carga lo que no le pertenece",valor:"sanadora",emoji:"🌸"},
-    {texto:"Una mujer reconectada — que encontró a Dios y no lo suelta",valor:"buscadora",emoji:"⚓"},
-    {texto:"Una mujer de fe firme — que inspira a las que la rodean",valor:"guerrera",emoji:"👑"},
-    {texto:"Una mujer en su propósito — viviendo con claridad y sin miedo",valor:"visionaria",emoji:"🦋"},
+    {texto:"Una mujer en paz",valor:"sanadora",emoji:"🌸"},
+    {texto:"Una mujer reconectada con Dios",valor:"buscadora",emoji:"⚓"},
+    {texto:"Una mujer de fe firme",valor:"guerrera",emoji:"👑"},
+    {texto:"Una mujer viviendo su propósito",valor:"visionaria",emoji:"🦋"},
   ]},
 
-  // ── ETAPA 4: COMPROMISO Y CIERRE (16-20) ─────────────────────
-  // Función: eliminar objeciones, crear urgencia, comprometer
+  // ── ETAPA 4: CASI LO TIENES (16-20) ──────────────────────────
 
   {id:16, category:"Casi lo tienes",
-   pregunta:"¿Qué estrategias espirituales\nte gustaría tener?",
-   subtexto:"Selecciona la que más resuena contigo.",
+   pregunta:"¿Qué quieres aprender primero?",
+   subtexto:"Lo que más te llama ahora mismo.",
    opciones:[
-    {texto:"Cómo crear un hábito espiritual que dure — sin culpa si fallo",valor:"buscadora",emoji:"🌱"},
-    {texto:"Cómo orar cuando no tengo palabras ni fuerzas",valor:"sanadora",emoji:"🙏"},
-    {texto:"Cómo mantener mi fe firme cuando todo se cae",valor:"guerrera",emoji:"⚔️"},
-    {texto:"Cómo entender el propósito que Dios tiene para esta etapa de mi vida",valor:"visionaria",emoji:"🎯"},
+    {texto:"Cómo crear un hábito sin culpa si fallo",valor:"buscadora",emoji:"🌱"},
+    {texto:"Cómo orar cuando no tengo palabras",valor:"sanadora",emoji:"🙏"},
+    {texto:"Cómo mantenerme firme cuando todo se cae",valor:"guerrera",emoji:"⚔️"},
+    {texto:"Cómo entender el propósito de esta etapa",valor:"visionaria",emoji:"🎯"},
   ]},
 
   {id:17, category:"Casi lo tienes",
-   pregunta:"¿Tienes algún momento importante\npróximamente?",
-   subtexto:"A veces hay fechas que nos dan el empuje que necesitamos.",
+   pregunta:"¿Tienes algo importante próximamente?",
+   subtexto:"A veces una fecha nos da el empuje.",
    opciones:[
-    {texto:"Sí — cumpleaños, aniversario o fecha especial",valor:"visionaria",emoji:"🎂"},
-    {texto:"Sí — un proceso difícil que necesito atravesar con fe",valor:"sanadora",emoji:"🌊"},
-    {texto:"Sí — una decisión importante que necesito tomar",valor:"guerrera",emoji:"🗺️"},
-    {texto:"No en particular — pero siento que este es el momento",valor:"buscadora",emoji:"⏰"},
+    {texto:"Sí — una fecha especial",valor:"visionaria",emoji:"🎂"},
+    {texto:"Sí — un proceso difícil que atravesar",valor:"sanadora",emoji:"🌊"},
+    {texto:"Sí — una decisión importante",valor:"guerrera",emoji:"🗺️"},
+    {texto:"No — pero siento que este es el momento",valor:"buscadora",emoji:"⏰"},
   ]},
 
   {id:18, category:"Casi lo tienes",
-   pregunta:"¿Sueles terminar lo que empiezas\ncuando algo realmente importa?",
-   subtexto:"Sé honesta — esto determina cómo personalizamos tu plan.",
+   pregunta:"Cuando algo te importa de verdad, ¿lo terminas?",
+   subtexto:"Sé honesta — esto personaliza tu plan.",
    opciones:[
-    {texto:"Sí — cuando algo me importa de verdad, lo termino",valor:"guerrera",emoji:"✅"},
-    {texto:"Depende — si hay apoyo y estructura, sí",valor:"buscadora",emoji:"🤝"},
-    {texto:"A veces me cuesta — especialmente cuando el dolor es grande",valor:"sanadora",emoji:"💭"},
-    {texto:"Siempre — la disciplina es algo que trabajo activamente",valor:"visionaria",emoji:"🔥"},
+    {texto:"Sí — cuando importa, lo termino",valor:"guerrera",emoji:"✅"},
+    {texto:"Con apoyo y estructura, sí",valor:"buscadora",emoji:"🤝"},
+    {texto:"Me cuesta cuando el dolor es grande",valor:"sanadora",emoji:"💭"},
+    {texto:"Siempre — la disciplina es mi trabajo",valor:"visionaria",emoji:"🔥"},
   ]},
 
   {id:19, category:"Casi lo tienes",
-   pregunta:"¿Cuánto tiempo estás dispuesta\na dedicar a tu vida espiritual cada día?",
-   subtexto:"Recuerda: el hábito más poderoso es el que puedes sostener.",
+   pregunta:"¿Cuánto tiempo al día le darías a tu fe?",
+   subtexto:"El hábito que puedes sostener es el que dura.",
    opciones:[
-    {texto:"5 minutos — necesito algo simple y real",valor:"buscadora",emoji:"⏱️"},
-    {texto:"10 minutos — puedo hacer espacio si vale la pena",valor:"sanadora",emoji:"🕐"},
-    {texto:"15 minutos — quiero que sea parte real de mi mañana",valor:"guerrera",emoji:"🌅"},
-    {texto:"20+ minutos — esto es prioridad para mí",valor:"visionaria",emoji:"📖"},
+    {texto:"5 minutos — simple y real",valor:"buscadora",emoji:"⏱️"},
+    {texto:"10 minutos",valor:"sanadora",emoji:"🕐"},
+    {texto:"15 minutos",valor:"guerrera",emoji:"🌅"},
+    {texto:"20+ minutos — es prioridad",valor:"visionaria",emoji:"📖"},
   ]},
 
   {id:20, category:"Casi lo tienes",
-   pregunta:"Una última cosa —\n¿qué te trajo hasta aquí hoy?",
+   pregunta:"¿Qué te trajo hasta aquí hoy?",
    subtexto:"Nada es casualidad. Especialmente esto.",
    opciones:[
-    {texto:"La curiosidad — algo llamó mi atención",valor:"buscadora",emoji:"🔮"},
+    {texto:"La curiosidad",valor:"buscadora",emoji:"🔮"},
     {texto:"El cansancio — ya no puedo seguir igual",valor:"sanadora",emoji:"🏳️"},
-    {texto:"La necesidad — sé que necesito más de Dios en mi vida",valor:"guerrera",emoji:"💡"},
-    {texto:"El llamado — siento que este es un paso importante",valor:"visionaria",emoji:"🚪"},
+    {texto:"La necesidad — quiero más de Dios",valor:"guerrera",emoji:"💡"},
+    {texto:"El llamado — este es un paso importante",valor:"visionaria",emoji:"🚪"},
   ]},
 
 ];
@@ -1262,7 +1258,7 @@ function ExitIntent({ nombre, onAceptar, onCerrar }) {
         </h3>
 
         <p style={{ color: G.textMid, fontSize: 14, lineHeight: 1.65, marginBottom: 20 }}>
-          Solo para ti y solo ahora,<br/>tu primer mes por:
+          Solo para ti y solo ahora,<br/>tu acceso completo por:
         </p>
 
         {/* Precio grande */}
