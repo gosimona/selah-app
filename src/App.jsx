@@ -1400,9 +1400,9 @@ export default function App() {
     }
 
     const urls = {
-      unico:      "https://pay.hotmart.com/A106288475F",
-      descuento:  "https://hotm.io/wgXbiFv",
-      mensualOff: "https://hotm.io/wgXbiFv",
+      unico:      "https://pay.hotmart.com/A106288475F?off=vcs0bajb&checkoutMode=10",
+      descuento:  "https://pay.hotmart.com/A106288475F?off=po18cwzy&checkoutMode=10",
+      mensualOff: "https://pay.hotmart.com/A106288475F?off=po18cwzy&checkoutMode=10",
     };
     const url = urls[plan] || urls.unico;
     window.open(url, "_blank");
