@@ -311,38 +311,69 @@ function ValidationScreen({data,onContinue}) {
 
 function Intro({onStart}) {
   const [visible,setVisible]=useState(false);
-  useEffect(()=>{setTimeout(()=>setVisible(true),80);},[]);
+  const [counter,setCounter]=useState(2847);
+  useEffect(()=>{
+    setTimeout(()=>setVisible(true),80);
+    const iv=setInterval(()=>setCounter(c=>c+Math.floor(Math.random()*2)),4000);
+    return()=>clearInterval(iv);
+  },[]);
   return (
-    <div style={{textAlign:"center",padding:"16px 0 8px",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",minHeight:360}}>
+    <div style={{textAlign:"center",padding:"12px 0 8px",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",minHeight:380}}>
 
       {/* Logo */}
-      <div style={{marginBottom:28,opacity:visible?1:0,transition:"opacity 0.5s ease"}}>
-        <div style={{display:"inline-flex",alignItems:"center",justifyContent:"center",width:60,height:60,borderRadius:"50%",background:`linear-gradient(135deg,${G.terraPale},${G.lavender})`,border:`1.5px solid ${G.borderS}`,marginBottom:12,boxShadow:G.shadow}}>
-          <span style={{fontSize:24}}>✦</span>
-        </div>
-        <div style={{color:G.terra,fontSize:10.5,letterSpacing:6,textTransform:"uppercase",fontWeight:700}}>SELAH</div>
+      <div style={{marginBottom:20,opacity:visible?1:0,transition:"opacity 0.5s ease"}}>
+        <img src="/selah-logo.webp" alt="SELAH" width="64" height="64"
+          style={{width:64,height:64,objectFit:"contain",marginBottom:8}}
+          loading="eager"/>
+        <div style={{color:G.terra,fontSize:10,letterSpacing:6,textTransform:"uppercase",fontWeight:700}}>SELAH</div>
       </div>
 
-      {/* Headline — único mensaje */}
-      <div style={{opacity:visible?1:0,transform:visible?"translateY(0)":"translateY(14px)",transition:"all 0.6s ease 0.1s",marginBottom:32}}>
-        <h1 style={{fontSize:"clamp(26px,7vw,36px)",fontWeight:800,color:G.text,lineHeight:1.2,fontFamily:"'Georgia',serif",marginBottom:12}}>
+      {/* Headline */}
+      <div style={{opacity:visible?1:0,transform:visible?"translateY(0)":"translateY(14px)",transition:"all 0.6s ease 0.1s",marginBottom:18}}>
+        <h1 style={{fontSize:"clamp(25px,6.8vw,34px)",fontWeight:800,color:G.text,lineHeight:1.2,fontFamily:"'Georgia',serif",marginBottom:10}}>
           Descubre qué necesita<br/>tu alma{" "}
           <span style={{color:G.terra,fontStyle:"italic"}}>hoy.</span>
         </h1>
-        <p style={{color:G.textMuted,fontSize:14,lineHeight:1.6}}>
-          5 minutos · 20 preguntas
+        <p style={{color:G.textMid,fontSize:14,lineHeight:1.55,maxWidth:300,margin:"0 auto"}}>
+          Tu perfil espiritual personalizado, listo en minutos.
         </p>
       </div>
 
-      {/* CTA único */}
-      <div style={{opacity:visible?1:0,transition:"opacity 0.6s ease 0.25s",width:"100%"}}>
+      {/* Prueba social — avatares + contador en vivo */}
+      <div style={{opacity:visible?1:0,transition:"opacity 0.6s ease 0.18s",marginBottom:22,display:"flex",alignItems:"center",gap:10}}>
+        <div style={{display:"flex"}}>
+          {["🌸","💜","🕊️","✨"].map((e,i)=>(
+            <div key={i} style={{width:26,height:26,borderRadius:"50%",background:`linear-gradient(135deg,${G.terraPale},${G.lavender})`,border:`2px solid ${G.white}`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,marginLeft:i>0?-8:0,boxShadow:G.shadow}}>{e}</div>
+          ))}
+        </div>
+        <span style={{color:G.textMid,fontSize:12}}>
+          <strong style={{color:G.terraDark}}>{counter.toLocaleString()}</strong> mujeres ya lo descubrieron
+        </span>
+      </div>
+
+      {/* Mini preview del viaje */}
+      <div style={{opacity:visible?1:0,transition:"opacity 0.6s ease 0.22s",background:G.bgCard,border:`1px solid ${G.border}`,borderRadius:14,padding:"12px 16px",marginBottom:22,width:"100%",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+        {[
+          {emoji:"💭",label:"Responde"},
+          {emoji:"✦",label:"Descubre"},
+          {emoji:"🌿",label:"Conecta"},
+        ].map((s,i)=>(
+          <div key={i} style={{display:"flex",flexDirection:"column",alignItems:"center",gap:4,flex:1}}>
+            <span style={{fontSize:18}}>{s.emoji}</span>
+            <span style={{color:G.textMuted,fontSize:10,fontWeight:600}}>{s.label}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* CTA con urgencia visual */}
+      <div style={{opacity:visible?1:0,transition:"opacity 0.6s ease 0.28s",width:"100%"}}>
         <button onClick={onStart}
-          style={{width:"100%",padding:"17px",background:`linear-gradient(135deg,${G.terra},${G.terraDark})`,color:G.white,border:"none",borderRadius:14,fontSize:16.5,fontWeight:700,cursor:"pointer",boxShadow:`0 8px 28px rgba(207,132,114,0.45)`,marginBottom:14}}
+          style={{width:"100%",padding:"18px",background:`linear-gradient(135deg,${G.terra},${G.terraDark})`,color:G.white,border:"none",borderRadius:14,fontSize:17,fontWeight:700,cursor:"pointer",boxShadow:`0 10px 32px rgba(207,132,114,0.5)`,marginBottom:12,position:"relative",overflow:"hidden",animation:"pulse 2.5s ease-in-out infinite"}}
           onMouseEnter={e=>e.currentTarget.style.transform="scale(1.02)"}
           onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"}>
-          Comenzar →
+          Descubrir mi perfil ahora →
         </button>
-        <p style={{color:G.textMuted,fontSize:11}}>🔒 Gratis · Privado · Sin registro</p>
+        <p style={{color:G.textMuted,fontSize:11}}>🔒 100% gratis · Privado · Sin registro</p>
       </div>
 
     </div>
